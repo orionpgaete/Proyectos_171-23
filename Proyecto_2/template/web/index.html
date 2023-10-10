@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <title>Tienda Django</title>
 </head>
 <body class="container mt-5">
-    <div class="alert alert-info display-1 text-center">DJANGO SHOP</div>
+    <div class="alert alert-info display-1 text-center"><img src="{% static 'img/logo.jpg'%}" alt="" width="100px">DJANGO SHOP</div>
 
     <div class="row">
         <div class="col"><a href="electronica/" class="btn btn-info p-3 w-100">Electronica</a></div>
