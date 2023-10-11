@@ -20,7 +20,6 @@ from gestion_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('busqueda/', views.busqueda),
-    path('buscar/', views.buscar),
-
+    path('buscar_prod/', views.busqueda_prd),
+    path('buscar/', views.buscar)
 ]

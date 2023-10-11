@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resultado Busqueda</title>
 </head>
 <body>
-    <p>Estas buscando :<strong>{{query}}</strong></p>
-
-    {% if produc %}
-        <p>Articulos encontrados: {{produc|length}} articulos</p>
-
-    <ul>
-        {% for produc in produc %}
+    
+    <p>Estas buscando: <strong>{{query}}</strong></p>
+        
+    {% if prodW %}
+    <p>articulos encontrados: <strong>{{prodW|length}}</strong> productos</p>
+        <ul>
+            {% for resul in prodW %}
             <li>
-                {{produc.nombre}}
+                {{resul.nombre}}
             </li>
-            <li>
-                {{produc.precio}}
-            </li>
-        {% endfor %}    
-    </ul>
+            {% endfor %}
+        </ul>
     {% else %}
-        <p>No esta el producto buscado</p>
-
+        <p>No esta el producto</p>
     {% endif %}
-
 </body>
 </html>
