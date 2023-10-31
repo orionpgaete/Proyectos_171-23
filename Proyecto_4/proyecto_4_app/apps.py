@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class GestionAppConfig(AppConfig):
+class Proyecto4AppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'gestion_app'
+    name = 'proyecto_4_app'
