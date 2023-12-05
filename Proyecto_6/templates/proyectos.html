@@ -32,15 +32,13 @@
                         <td>{{ pro.fechatermino}}</td>
                         <td>{{ pro.responsable}}</td>
                         <td>{{ pro.prioriodad}}</td>
-                        <td><a href="/actualiza" class="btn btn-success btn-sm"><i class="bi bi-pencil-square"></i></a></td>
-                        <td><a href="/eliminar" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a></td>
+                        <td><a href="/actualiza/{{pro.id}}" class="btn btn-success btn-sm"><i class="bi bi-pencil-square"></i></a></td>
+                        <td><a href="/eliminar/{{pro.id}}" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a></td>
                     </tr>
 
                 {% endfor %}
             </tbody>
-        </table>
-
-    
+        </table>    
     {% else %}
         <div class="alert-danger text-center">No se encuetran proyectos en el SISTEMA</div>
     {% endif %}

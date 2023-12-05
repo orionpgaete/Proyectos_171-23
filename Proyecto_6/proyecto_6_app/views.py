@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Proyecto
 from .forms import FormProyecto
 
@@ -17,6 +17,24 @@ def agregaProyecto(request):
 
     if (request.method == 'POST'):
         form = FormProyecto(request.POST)
+        if (form.is_valid()):
+            form.save()
+        return index(request)
+    
+    data = {'form': form}
+    return render(request, 'agregar.html', data)
+
+def eliminarProyecto(request, id):
+    proye = Proyecto.objects.get(id = id)
+    proye.delete()
+    return redirect('/proyectos')
+
+def modificaProyecto(request, id):
+    proye = Proyecto.objects.get(id = id)
+    form = FormProyecto(instance=proye)
+    
+    if (request.method == 'POST'):
+        form = FormProyecto(request.POST, instance=proye)
         if (form.is_valid()):
             form.save()
         return index(request)
