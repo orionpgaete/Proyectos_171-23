@@ -17,5 +17,3 @@ class RegistroUsuarioForm(forms.Form):
     password.widget.attrs['class'] = 'form-control'
     estado.widget.attrs['class']= 'form-select'
     
-
-    
