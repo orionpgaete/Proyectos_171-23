@@ -20,5 +20,7 @@ from proyecto_8_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('estudiante/', views.estudiante_list)
+    path('estudiante/', views.estudiante_list),
+    path('estudiante_detalle/<int:id>', views.estudiante_detalle),
+    path('estudiante_class', views.Estudiante_list_class.as_view())
 ]
